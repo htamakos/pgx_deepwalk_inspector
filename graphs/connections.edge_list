@@ -1,0 +1,245 @@
+# Directed graph (each unordered pair of nodes is saved once)
+# Nodes: 78 Edges: 164
+# FromNodeId	 ToNodeId
+1	 *	 ""	 "Christianity"	 ""	 ""	 ""	 "Barack Obama"	 "United States"	 ""	 ""	 "44th president of United States of America"	 "political authority"
+2	 *	 ""	 ""	 ""	 ""	 ""	 "Beyonce"	 "United States"	 ""	 ""	 ""	 "singer actress"
+3	 *	 ""	 ""	 ""	 ""	 "Charlie Rose"	 "Charlie Rose"	 "United States"	 ""	 ""	 ""	 "talk show host journalist"
+4	 *	 ""	 ""	 ""	 ""	 ""	 "Janet Yellen"	 "United States"	 ""	 ""	 ""	 "american economist"
+5	 *	 ""	 "Catholicism"	 ""	 ""	 ""	 "Pope Francis"	 "Italy"	 ""	 ""	 "pope"	 "Catholic religion authority"
+6	 *	 ""	 ""	 ""	 ""	 "Key and Peele"	 "Jordan Peele"	 "United States"	 ""	 ""	 ""	 "american comedian actor"
+7	 *	 ""	 ""	 ""	 ""	 "Mad TV"	 "Keegan-Michael Key"	 "United States"	 ""	 ""	 ""	 "american comedian actor"
+8	 *	 ""	 ""	 "Koch Industries"	 ""	 ""	 "David Koch"	 "United States"	 ""	 ""	 "executive vice president"	 "american business man"
+9	 *	 ""	 ""	 "Koch Industries"	 ""	 ""	 "Charles Koch"	 "United States"	 ""	 ""	 "chief executive officer"	 "american business man"
+10	 *	 ""	 ""	 ""	 ""	 ""	 "Rand Paul"	 ""	 ""	 ""	 "junior United States senator for Kentucky"	 "political authority"
+11	 *	 ""	 ""	 ""	 ""	 ""	 "Eric Holder"	 "United States"	 ""	 ""	 "United States Deputy Attorney General"	 "political authority"
+12	 *	 "Food assistance branch of United Nations"	 ""	 ""	 ""	 ""	 "World Food Programme"	 "Italy"	 ""	 ""	 ""	 ""
+13	 *	 ""	 ""	 ""	 ""	 ""	 "Ertharin Cousin"	 "United States"	 ""	 ""	 "United States Ambassador to the United Nations agencies for Food and Agriculture"	 "political authority"
+14	 *	 ""	 "Islam"	 "Dangote Group"	 ""	 ""	 "Aliko Dangote"	 ""	 ""	 ""	 ""	 "business magnate"
+15	 *	 "TV show series"	 ""	 ""	 ""	 ""	 "House of Cards"	 "United States"	 ""	 "political drama"	 ""	 ""
+16	 *	 "Internet video rental and streaming"	 ""	 ""	 ""	 ""	 "Netflix"	 "United States"	 ""	 ""	 ""	 ""
+17	 *	 ""	 ""	 ""	 ""	 ""	 "Robin Wright"	 "United States"	 ""	 ""	 ""	 "actress"
+18	 *	 ""	 ""	 ""	 ""	 "Orange is the new black"	 "Jenji Kohan"	 "United States"	 ""	 ""	 ""	 "writer producer director"
+19	 *	 ""	 "Methodism"	 ""	 ""	 ""	 "Kirsten Gillibrand"	 "United States"	 ""	 ""	 "junior United States Senator from New York"	 "political authority"
+20	 *	 ""	 ""	 "Farallon Capital Management"	 ""	 ""	 "Tom Steyer"	 "United States"	 ""	 ""	 "founder"	 "philantropist"
+21	 *	 ""	 "Methodism"	 ""	 ""	 ""	 "Hillary Clinton"	 "United States"	 ""	 ""	 "67th United States Secretary of State"	 "political authority"
+22	 *	 ""	 "Catholicism"	 ""	 ""	 ""	 "John Kerry"	 "United States"	 ""	 ""	 "68th United States Secretary of State"	 "political authority"
+23	 *	 ""	 ""	 ""	 ""	 ""	 "Angela Merkel"	 "Germany"	 ""	 ""	 "chancellor"	 "political authority"
+24	 *	 ""	 "buddhism"	 ""	 ""	 ""	 "Edward Snowden"	 "United States"	 ""	 ""	 "system administrator"	 "political authority"
+25	 *	 ""	 ""	 ""	 ""	 ""	 "Vladimir Putin"	 "Russia"	 ""	 ""	 "president of Russia"	 "political authority"
+26	 *	 ""	 "shintoism/zen buddhism"	 ""	 ""	 ""	 "Shinzo Abe"	 "Japan"	 ""	 ""	 "57th prime minister of Japan"	 "political authority"
+27	 *	 ""	 ""	 ""	 ""	 ""	 "Xi Jinping"	 "China"	 ""	 ""	 "president of the People's Republic of China"	 "political authority"
+28	 *	 ""	 "twelver shia islam"	 ""	 ""	 ""	 "Hassan Rouhani"	 "Iran"	 ""	 ""	 "7th president of Iran"	 "political authority"
+29	 *	 ""	 ""	 "General Motors"	 ""	 ""	 "Mary Barra"	 "United States"	 ""	 ""	 "chief executive officer"	 "business woman"
+30	 *	 ""	 "roman catholicism"	 ""	 ""	 ""	 "Jerry Brown"	 "United States"	 ""	 ""	 "34th and 39th governorn of California"	 "political authority"
+31	 *	 ""	 ""	 ""	 ""	 ""	 "Jason Collins"	 "United States"	 "Brooklyn nets"	 ""	 "basketball center player"	 "professional basketball player"
+32	 *	 ""	 "atheism"	 ""	 ""	 ""	 "Kim Jong Un"	 "North Korea"	 ""	 ""	 "Supreme leader of North Korea"	 "political authority"
+33	 *	 ""	 "sunni islam"	 ""	 ""	 ""	 "Abdel Fattah eL-Sisi"	 "Egypt"	 ""	 ""	 "6th president of Egypt"	 "political authority"
+34	 *	 ""	 "sunni islam"	 ""	 ""	 ""	 "Abdullah Gul"	 "Turkey"	 ""	 ""	 "11th president of Turkey"	 "political authority"
+35	 *	 ""	 "sunni islam"	 ""	 ""	 ""	 "Serena Williams"	 "United States"	 ""	 ""	 "11th president of Turkey"	 "professional tennis player"
+36	 *	 ""	 ""	 ""	 ""	 ""	 "Pharrell Williams"	 "United States"	 ""	 ""	 "singer-songwriter"	 ""
+37	 *	 "online retailing"	 ""	 ""	 ""	 ""	 "Amazon"	 "United States"	 ""	 ""	 ""	 ""
+38	 *	 ""	 ""	 ""	 ""	 ""	 "Miley Cyrus"	 "United States"	 ""	 ""	 "singer-songwriter"	 ""
+39	 *	 ""	 ""	 ""	 ""	 ""	 "Kerry Washington"	 "United States"	 ""	 ""	 "actress"	 ""
+40	 *	 "broadcast television network"	 ""	 ""	 ""	 ""	 "ABC"	 "United States"	 ""	 ""	 ""	 ""
+41	 *	 ""	 ""	 ""	 ""	 ""	 "Carrie Underwood"	 "United States"	 ""	 ""	 "singer-songwriter"	 ""
+42	 *	 "broadcast television network"	 ""	 ""	 ""	 ""	 "NBC"	 "United States"	 ""	 ""	 ""	 ""
+43	 *	 ""	 ""	 ""	 ""	 ""	 "Alfonso Cuaron"	 "Mexico"	 ""	 ""	 "film director"	 ""
+44	 *	 ""	 ""	 ""	 ""	 ""	 "Seth Meyers"	 "United States"	 ""	 ""	 "actor"	 ""
+45	 *	 "broadcast television network"	 ""	 ""	 ""	 ""	 "CBS"	 "United States"	 ""	 ""	 ""	 ""
+46	 *	 "annual award ceremony for the achievements in film industry"	 ""	 ""	 ""	 ""	 "The Academy"	 "United States"	 ""	 ""	 ""	 ""
+47	 *	 ""	 ""	 ""	 ""	 ""	 "Matthew McConaughey"	 "United States"	 ""	 ""	 "actor"	 ""
+48	 *	 ""	 ""	 ""	 ""	 ""	 "Robert Lopez"	 "United States"	 ""	 ""	 "songwriter"	 ""
+49	 *	 ""	 ""	 ""	 ""	 ""	 "Kristen Anderson-Lopez"	 "United States"	 ""	 ""	 "actress songwriter"	 ""
+50	 *	 ""	 ""	 ""	 ""	 ""	 "Amy Adams"	 "United States"	 ""	 ""	 "actress singer"	 ""
+51	 *	 ""	 ""	 ""	 ""	 ""	 "Megan Ellison"	 "United States"	 ""	 ""	 "film producer"	 ""
+52	 *	 ""	 ""	 ""	 ""	 ""	 "Steve McQueen"	 "United States"	 ""	 ""	 "actor"	 ""
+53	 *	 ""	 ""	 ""	 ""	 ""	 "Benedict Cumberbatch"	 "United Kingdom"	 ""	 ""	 "actor film producer"	 ""
+54	 *	 ""	 ""	 ""	 ""	 ""	 "John Green"	 "United States"	 ""	 ""	 "adult fiction author"	 ""
+55	 *	 ""	 ""	 ""	 ""	 ""	 "H.R. McMaster"	 "United States"	 ""	 ""	 "soldier"	 ""
+56	 *	 ""	 ""	 ""	 ""	 ""	 "Omar Kobine Layama"	 ""	 ""	 ""	 ""	 ""
+57	 *	 ""	 ""	 ""	 ""	 ""	 "Dieudonne Nzapalainga"	 ""	 ""	 ""	 ""	 ""
+58	 *	 ""	 ""	 ""	 ""	 ""	 "Nicolas Guerekoyame Gbangou"	 ""	 ""	 ""	 ""	 ""
+59	 *	 "state"	 "Catholicism"	 ""	 ""	 ""	 "The Vatican"	 "Rome"	 ""	 ""	 ""	 ""
+60	 *	 ""	 ""	 ""	 ""	 ""	 "Nicolas Maduro"	 "Venezuela"	 ""	 ""	 ""	 "political authority"
+61	 *	 ""	 ""	 ""	 ""	 ""	 "Michelle Bachelet"	 "Chile"	 ""	 ""	 "President of Chile"	 "political authority"
+62	 *	 ""	 ""	 ""	 ""	 ""	 "Jose Mujica"	 "Uruguay"	 ""	 ""	 "President of Uruguay"	 "political authority"
+63	 *	 ""	 ""	 ""	 ""	 ""	 "Cristiano Ronaldo"	 "Portugal"	 ""	 ""	 "Professional footballer"	 ""
+64	 *	 ""	 ""	 ""	 ""	 ""	 "Jeff Bezos"	 "United States"	 ""	 ""	 "business man"	 ""
+65	 *	 "e-commerce company"	 ""	 ""	 ""	 ""	 "Alibaba"	 "China"	 ""	 ""	 ""	 ""
+66	 *	 "e-commerce company"	 ""	 ""	 ""	 ""	 "eBay"	 "United States"	 ""	 ""	 ""	 ""
+67	 *	 "internet-related services products"	 ""	 ""	 ""	 ""	 "Google"	 "United States"	 ""	 ""	 ""	 ""
+68	 *	 ""	 ""	 ""	 ""	 ""	 "Jack Ma"	 "China"	 ""	 ""	 "business man"	 ""
+69	 *	 "mass media"	 ""	 ""	 ""	 ""	 "Tencent"	 "China"	 ""	 ""	 ""	 ""
+70	 *	 ""	 ""	 ""	 ""	 ""	 "Carl Icahn"	 "United States"	 ""	 ""	 "business man"	 ""
+71	 *	 ""	 ""	 ""	 ""	 ""	 "Pony Ma"	 "China"	 ""	 ""	 "business man"	 ""
+72	 *	 "online social network service"	 ""	 ""	 ""	 ""	 "Facebook"	 "United States"	 ""	 ""	 ""	 ""
+73	 *	 "home automation company"	 ""	 ""	 ""	 ""	 "Nest"	 "United States"	 ""	 ""	 ""	 ""
+74	 *	 "photo messaging application"	 ""	 ""	 ""	 ""	 "Snapchat"	 "United States"	 ""	 ""	 ""	 ""
+75	 *	 ""	 ""	 ""	 ""	 ""	 "Bobby Murphy"	 "United States"	 ""	 ""	 "cofounder of snapchat"	 ""
+76	 *	 ""	 ""	 ""	 ""	 ""	 "Evan Spiegel"	 "United States"	 ""	 ""	 "cofounder of snapchat"	 ""
+77	 *	 ""	 ""	 ""	 ""	 ""	 "Tony Fadell"	 "United States"	 ""	 ""	 "CEO of Nest"	 ""
+78	 *	 ""	 ""	 ""	 ""	 ""	 "Hosain Rahman"	 "United States"	 ""	 ""	 "CEO of Jawbone"	 ""
+1	 2	 "collaborates"	 1.0
+1	 3	 "collaborates"	 1.0
+1	 4	 "admires"	 1.0
+1	 5	 "admires"	 1.0
+1	 6	 "admires"	 1.0
+1	 7	 "admires"	 1.0
+1	 8	 "feuds"	 1000.0
+1	 9	 "feuds"	 1000.0
+1	 10	 "feuds"	 1000.0
+1	 11	 "collaborates"	 1.0
+1	 15	 "admires"	 1.0
+1	 19	 "collaborates"	 1.0
+1	 20	 "collaborates"	 1.0
+1	 21	 "collaborates"	 1.0
+1	 22	 "collaborates"	 1.0
+1	 23	 "collaborates"	 1.0
+1	 24	 "feuds"	 1000.0
+1	 25	 "feuds"	 1000.0
+1	 26	 "collaborates"	 1.0
+1	 28	 "collaborates"	 1.0
+2	 1	 "collaborates"	 1.0
+2	 35	 "admires"	 1.0
+2	 36	 "collaborates"	 1.0
+2	 37	 "feuds"	 1000.0
+3	 1	 "collaborates"	 1.0
+3	 45	 "collaborates"	 1.0
+3	 52	 "collaborates"	 1.0
+3	 55	 "collaborates"	 1.0
+5	 56	 "collaborates"	 1.0
+5	 57	 "collaborates"	 1.0
+5	 58	 "collaborates"	 1.0
+5	 59	 "leads"	 1.0
+6	 1	 "admires"	 1.0
+6	 7	 "collaborates"	 1.0
+7	 1	 "admires"	 1.0
+7	 6	 "collaborates"	 1.0
+8	 1	 "feuds"	 1000.0
+8	 9	 "collaborates"	 1.0
+9	 1	 "feuds"	 1000.0
+9	 8	 "collaborates"	 1.0
+10	 1	 "feuds"	 1000.0
+10	 11	 "collaborates"	 1.0
+11	 1	 "collaborates"	 1.0
+11	 10	 "collaborates"	 1.0
+12	 1	 "admires"	 1.0
+12	 14	 "collaborates"	 1.0
+13	 12	 "leads"	 1.0
+14	 12	 "collaborates"	 1.0
+15	 16	 "collaborates"	 1.0
+15	 17	 "collaborates"	 1.0
+16	 15	 "collaborates"	 1.0
+16	 18	 "collaborates"	 1.0
+17	 15	 "collaborates"	 1.0
+18	 16	 "collaborates"	 1.0
+19	 1	 "collaborates"	 1.0
+19	 15	 "admires"	 1.0
+19	 21	 "admires"	 1.0
+19	 31	 "admires"	 1.0
+20	 1	 "collaborates"	 1.0
+20	 21	 "collaborates"	 1.0
+21	 1	 "collaborates"	 1.0
+21	 20	 "collaborates"	 1.0
+21	 23	 "admires"	 1.0
+21	 29	 "admires"	 1.0
+22	 1	 "collaborates"	 1.0
+22	 23	 "collaborates"	 1.0
+22	 24	 "feuds"	 1000.0
+22	 25	 "feuds"	 1000.0
+22	 32	 "feuds"	 1000.0
+23	 1	 "collaborates"	 1.0
+23	 21	 "admires"	 1.0
+23	 22	 "collaborates"	 1.0
+23	 25	 "feuds"	 1000.0
+24	 1	 "feuds"	 1000.0
+24	 22	 "feuds"	 1000.0
+24	 25	 "collaborates"	 1.0
+25	 1	 "feuds"	 1000.0
+25	 22	 "feuds"	 1000.0
+25	 23	 "feuds"	 1000.0
+25	 24	 "collaborates"	 1.0
+25	 33	 "admires"	 1.0
+26	 1	 "collaborates"	 1.0
+26	 27	 "feuds"	 1000.0
+27	 26	 "feuds"	 1000.0
+28	 1	 "collaborates"	 1.0
+30	 21	 "admires"	 1.0
+32	 22	 "feuds"	 1000.0
+33	 34	 "feuds"	 1000.0
+34	 33	 "feuds"	 1000.0
+36	 2	 "collaborates"	 1.0
+36	 38	 "collaborates"	 1.0
+37	 2	 "feuds"	 1000.0
+37	 65	 "feuds"	 1000.0
+37	 66	 "feuds"	 1000.0
+37	 67	 "feuds"	 1000.0
+38	 2	 "admires"	 1.0
+38	 36	 "collaborates"	 1.0
+39	 36	 "admires"	 1.0
+39	 40	 "collaborates"	 1.0
+40	 39	 "collaborates"	 1.0
+40	 42	 "feuds"	 1000.0
+40	 45	 "feuds"	 1000.0
+41	 42	 "collaborates"	 1.0
+42	 40	 "feuds"	 1000.0
+42	 41	 "collaborates"	 1.0
+42	 43	 "collaborates"	 1.0
+42	 44	 "collaborates"	 1.0
+42	 45	 "feuds"	 1000.0
+43	 42	 "collaborates"	 1.0
+44	 42	 "collaborates"	 1.0
+45	 3	 "collaborates"	 1.0
+45	 40	 "feuds"	 1000.0
+45	 42	 "feuds"	 1000.0
+46	 43	 "admires"	 1.0
+46	 47	 "admires"	 1.0
+46	 48	 "admires"	 1.0
+46	 49	 "admires"	 1.0
+46	 50	 "admires"	 1.0
+46	 52	 "admires"	 1.0
+48	 49	 "collaborates"	 1.0
+49	 48	 "collaborates"	 1.0
+50	 51	 "collaborates"	 1.0
+51	 50	 "collaborates"	 1.0
+52	 3	 "collaborates"	 1.0
+52	 53	 "collaborates"	 1.0
+53	 52	 "collaborates"	 1.0
+54	 53	 "admires"	 1.0
+55	 3	 "collaborates"	 1.0
+56	 5	 "collaborates"	 1.0
+56	 57	 "collaborates"	 1.0
+56	 58	 "collaborates"	 1.0
+57	 5	 "collaborates"	 1.0
+57	 56	 "collaborates"	 1.0
+57	 58	 "collaborates"	 1.0
+58	 5	 "collaborates"	 1.0
+58	 56	 "collaborates"	 1.0
+58	 57	 "collaborates"	 1.0
+59	 60	 "collaborates"	 1.0
+60	 59	 "collaborates"	 1.0
+60	 61	 "feuds"	 1000.0
+61	 60	 "feuds"	 1000.0
+62	 5	 "admires"	 1.0
+63	 5	 "admires"	 1.0
+64	 37	 "leads"	 1.0
+65	 37	 "feuds"	 1000.0
+65	 69	 "feuds"	 1000.0
+66	 37	 "feuds"	 1000.0
+66	 70	 "feuds"	 1000.0
+67	 37	 "feuds"	 1000.0
+67	 72	 "feuds"	 1000.0
+67	 73	 "leads"	 1.0
+68	 65	 "leads"	 1000.0
+69	 65	 "feuds"	 1000.0
+70	 66	 "feuds"	 1000.0
+71	 69	 "leads"	 1.0
+72	 67	 "feuds"	 1000.0
+72	 74	 "feuds"	 1000.0
+75	 74	 "leads"	 1.0
+75	 76	 "collaborates"	 1.0
+76	 74	 "leads"	 1.0
+76	 75	 "collaborates"	 1.0
+77	 73	 "leads"	 1.0
+77	 78	 "collaborates"	 1.0
+78	 77	 "collaborates"	 1.0

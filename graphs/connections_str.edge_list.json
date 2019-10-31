@@ -1,0 +1,74 @@
+{
+    "edge_uris": [
+        
+    ],
+    "loading": {
+        
+    },
+    "error_handling": {
+        
+    },
+    "vertex_id_type": "string",
+    "vertex_uris": [
+        "connections_str.edge_list"
+    ],
+    "format": "edge_list",
+    "vertex_props": [
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "role"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "occupation"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "company"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "genre"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "type"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "show"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "team"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "music_genre"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "name"
+        },
+        {
+            "type": "string",
+            "dimension": 0,
+            "name": "country"
+        }
+    ],
+    "edge_props": [
+        
+    ],
+    "attributes": {
+        
+    }
+}

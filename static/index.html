@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>d3test</title>
+    <script src="../viz_data/connections.js" charset="utf-8"></script>
+    <script src="../viz_data/walk_result.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <style>
+#mynetwork {
+  width: 700px;
+  height: 700px;
+  border: 1px solid #444444;
+  background-color: #222222;
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="uk-heading-divider uk-margin-left uk-margin-right uk-margin-top">PGX DeepWalk RandomWalk Inspector</h1>
+    <div class="uk-flex uk-margin">
+      <div id="mynetwork" class="uk-margin-left"></div>
+      <div class="uk-margin">
+          <div class="uk-flex uk-flex-column">
+            <div>
+              <button id="start_randomwalk" class="uk-button uk-button-primary uk-margin-left uk-margin-bottom">Start Random Walk</button>
+              <button id="stop_randomwalk" class="uk-button uk-button-danger uk-margin-left uk-margin-bottom">Stop Random Walk</button>
+            </div>
+            <div class="uk-card uk-card-default uk-margin-left uk-width-expand">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div>
+                    <span uk-icon="heart"></span>
+                  </div>
+                  <h3 class="uk-card-title">RandomWalk Result</h3>
+                </div>
+              </div>
+              <div class="uk-card-body" >
+                <div class="uk-flex">
+                  <h5 class="uk-margin">Current RandomWalk Times: </h5>
+                  <span class="uk-margin-left" id = "random_walk_times">N/A</span>
+                </div>
+                <div class="uk-flex">
+                  <h5 class="uk-margin">Current Started Node ID: </h5>
+                  <span class="uk-margin-left" id="random_walk_started_node_id">N/A</span>
+                </div>
+                <span id = "random_walk_status" class="uk-label uk-label-default">Not Started</span>
+                <table class="uk-table uk-table-justify uk-table-divider" id="deep_walk_result_table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Start Node></th>
+                            <th>Node Id></th>
+                            <th>Node Id></th>
+                            <th>Node Id></th>
+                            <th>End Node</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+               </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script>
+    
+    var nodes = window.connections.nodes;
+    var edges = window.connections.edges;
+    var color = "gray";
+    var len = undefined;
+    
+    // create a network
+    var container = document.getElementById("mynetwork");
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+    var options = {
+      nodes: {
+        shape: "dot",
+        size: 20,
+        font: {
+          size: 20,
+          color: "#fff"
+        },
+        borderWidth: 2,
+        color: {
+          highlight: {
+            border: '#fe5000',
+            background: '#f5ae93'
+          },
+        }
+      },
+      edges: {
+        width: 2,
+        arrows: {
+            to: { enabled: true }
+        }
+      }
+    };
+    network = new vis.Network(container, data, options);
+    
+    function* walkResultGenerator(){
+      let len = walk_result.length
+
+      yield* walk_result.results
+    }
+
+    var gWR = walkResultGenerator();
+    var randomWalkCount = 1;
+    var intervalId;
+    var indexWalksPerVertex = 0
+    var isWalking = false;
+
+    function walk(walkLength = 5){
+      var currentArray = gWR.next().value;
+      if(indexWalksPerVertex == 0){
+        updateRandomWalkCount(randomWalkCount);
+        updateCurrentStartedNode(currentArray[0]);
+        updateRandomWalkResultTable(1, true);
+      }
+
+      intervalId = setInterval(function(){
+        updateRandomWalkCount(randomWalkCount)
+
+        if(indexWalksPerVertex >= walkLength){
+          indexWalksPerVertex = 0;
+          v = gWR.next()
+          if(v.done){
+            updateRandomWalkStatus("uk-label-success", "Finished")
+            clearInterval(intervalId)
+            return;
+          }
+          currentArray = v.value
+          updateCurrentStartedNode(currentArray[indexWalksPerVertex]);
+          updateRandomWalkResultTable(randomWalkCount, true);
+        }
+    
+        network.selectNodes([currentArray[indexWalksPerVertex]]);
+        updateRandomWalkResultTable(currentArray[indexWalksPerVertex], false);
+        indexWalksPerVertex++
+        randomWalkCount++;
+      }, 1000)
+    }
+
+    var startBtn = document.getElementById('start_randomwalk');
+    startBtn.addEventListener('click', { walkLength: 5, handleEvent: function handleEvent (event) {
+      if(!isWalking){
+        updateRandomWalkStatus("uk-label-warning", "Walking...")
+        isWalking = true;
+        walk(this.walkLength)
+      }
+    }})
+
+    var stopBtn = document.getElementById('stop_randomwalk');
+    stopBtn.addEventListener('click', function(){
+      if(isWalking){
+        clearInterval(intervalId);
+        isWalking = false;
+        updateRandomWalkStatus('uk-label-danger', 'Stopped');
+      }
+    });
+
+    function updateRandomWalkStatus(cls, message){
+      let elm = document.getElementById("random_walk_status") 
+      let classList = elm.classList;
+      let currentStatusClass = 'uk-label-default'
+      if(elm.classList.contains("uk-label-warning")){
+        currentStatusClass = 'uk-label-warning'
+      }
+    
+      if(elm.classList.contains("uk-label-success")){
+        currentStatusClass = 'uk-label-success'
+      }
+    
+      if(elm.classList.contains("uk-label-danger")){
+        currentStatusClass = 'uk-label-danger'
+      }
+    
+    
+      classList.replace(currentStatusClass, cls) 
+      elm.textContent = message
+    }
+    
+    function updateRandomWalkCount(count = 0){
+        let elm = document.getElementById("random_walk_times")
+        elm.textContent = count
+    }
+    
+    function updateCurrentStartedNode(nodeId){
+        let elm = document.getElementById("random_walk_started_node_id")
+        elm.textContent = nodeId
+    }
+    
+    function updateRandomWalkResultTable(v, isFirst = false){
+      let elm = document.getElementById("deep_walk_result_table");
+     
+      var tr;
+      if(isFirst){
+        tr = elm.insertRow(1);
+      } else {
+        tr = elm.rows[1];
+      }
+    
+      var td = tr.insertCell(tr.cells.length);
+      td.appendChild(document.createTextNode(v));
+    }
+    </script>
+  </body>
+</html>
+
