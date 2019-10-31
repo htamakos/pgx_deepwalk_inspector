@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>d3test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="../viz_data/tsne_result.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+    #tsne_plot {
+        width: 100%;
+        height: 600px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 class="uk-heading-divider uk-margin-left uk-margin-right uk-margin-top">PGX DeepWalk Inspector</h1>
+    <nav class="uk-navbar-container uk-margin-left uk-margin-bottom" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a href="index.html">RandomWalk</a>
+                </li>
+                <li class="uk-active">
+                    <a href="tsne.html">t-SNE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <li>
+    <div class="uk-flex uk-margin-left">
+      <div class="uk-margin-right" id="tsne_plot">
+      </div>
+      <!--
+      <div class="uk-margin">
+          <div class="uk-flex uk-flex-column uk-margin-right">
+            <div class="uk-card uk-card-default uk-margin-left uk-width-expand">
+              <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div>
+                    <span uk-icon="heart"></span>
+                  </div>
+                  <h3 class="uk-card-title">RandomWalk Result</h3>
+                </div>
+              </div>
+              <div class="uk-card-body" >
+                <div class="uk-flex">
+                  <h5 class="uk-margin">Current RandomWalk Times: </h5>
+                  <span class="uk-margin-left" id = "random_walk_times">N/A</span>
+                </div>
+                <div class="uk-flex">
+                  <h5 class="uk-margin">Current Started Node ID: </h5>
+                  <span class="uk-margin-left" id="random_walk_started_node_id">N/A</span>
+                </div>
+                <span id = "random_walk_status" class="uk-label uk-label-default">Not Started</span>
+                <table class="uk-table uk-table-justify uk-table-divider" id="deep_walk_result_table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Start Node></th>
+                            <th>Node Id></th>
+                            <th>Node Id></th>
+                            <th>Node Id></th>
+                            <th>End Node</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+               </div>
+            </div>
+          </div>
+      </div>
+      -->
+    </div>
+    <script type="text/javascript">
+    tsne_result = window.tsne_result
+    var trace1 = {
+      x: tsne_result.x,
+      y: tsne_result.y,
+      name: tsne_result.name,
+      mode: 'markers+text',
+      type: 'scatter',
+      text: tsne_result.name,
+      textposition: 'top center',
+      textfont: {
+        family:  'Raleway, sans-serif'
+      },
+      marker: { size: 12 }
+    };
+    
+    var data = [trace1];
+    var layout = { 
+      xaxis: {
+        range: [Math.min(...tsne_result.x) -100, Math.max(...tsne_result.x) + 100]
+      },
+      yaxis: {
+        range: [Math.min(...tsne_result.y) -100, Math.max(...tsne_result.y) + 100]
+      },
+      legend: {
+        y: 100,
+        yref: 'paper',
+        font: {
+          family: 'Arial, sans-serif',
+          size: 20,
+          color: 'grey',
+        }
+      },
+      title:'t-SNE Plot'
+    };
+    
+    Plotly.newPlot('tsne_plot', data, layout, {showSendToCloud: true});
+    </script>
+  </body>
+</html>
+

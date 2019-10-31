@@ -8,20 +8,10 @@ import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 import org.deeplearning4j.plot.BarnesHutTsne;
 
-// import org.deeplearning4j.ui.UiConnectionInfo;
-// import org.deeplearning4j.ui.api.UIServer;
-
 public class App {
     public static void main(String[] args) {
-        // UIServer uiServer = UIServer.getInstance();
         Word2Vec w2v = WordVectorSerializer.readWord2VecModel("viz_data/word2vec.model", true);
 
-        // UiConnectionInfo connectionInfo =
-        //        new UiConnectionInfo.Builder()
-        //                // .setAddress("localhost")
-        //                .setPort(9000)
-        //                .setPath("deeplearning4j-ui-servlet")
-        //                .build();
         System.out.println(w2v.vocab().tokens());
         BarnesHutTsne tsne =
                 new BarnesHutTsne.Builder()
@@ -34,6 +24,6 @@ public class App {
                         .normalize(true)
                         .build();
 
-        w2v.lookupTable().plotVocab(tsne, 50, new File("viz_data/tnse_result.txt"));
+        w2v.lookupTable().plotVocab(tsne, 78, new File("viz_data/tnse_result.txt"));
     }
 }

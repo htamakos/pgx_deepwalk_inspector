@@ -10,17 +10,30 @@
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <style>
-#mynetwork {
-  width: 700px;
-  height: 700px;
-  border: 1px solid #444444;
-  background-color: #222222;
-}
+      #mynetwork {
+        width: 700px;
+        height: 700px;
+        border: 1px solid #444444;
+        background-color: #222222;
+      }
     </style>
   </head>
   <body>
-    <h1 class="uk-heading-divider uk-margin-left uk-margin-right uk-margin-top">PGX DeepWalk RandomWalk Inspector</h1>
-    <div class="uk-flex uk-margin">
+    <h1 class="uk-heading-divider uk-margin-left uk-margin-right uk-margin-top">PGX DeepWalk Inspector</h1>
+    <nav class="uk-navbar-container uk-margin-left uk-margin-bottom" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active">
+                    <a href="">RandomWalk</a>
+                </li>
+                <li>
+                    <a href="tsne.html">t-SNE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <li>
+    <div class="uk-flex uk-margin-left">
       <div id="mynetwork" class="uk-margin-left"></div>
       <div class="uk-margin">
           <div class="uk-flex uk-flex-column">
